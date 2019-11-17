@@ -13,6 +13,7 @@ express()
     .set('views', path.join(__dirname, 'views'))
     .set('view engine', 'ejs')
     .get('/', (req, res) => res.render('pages/index'))
+    .get('/getRate', (req, res) => res.render('pages/rates'))
     .get('/cool', (req, res) => res.send(cool()))
     .get('/times', (req, res) => res.send(showTimes()))
     .get('/db', async(req, res) => {
@@ -27,7 +28,8 @@ express()
             res.send("Error " + err);
         }
     })
-    .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
+.listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 showTimes = () => {
     let result = '';
@@ -37,3 +39,7 @@ showTimes = () => {
     }
     return result;
 }
+
+// getRate = () => {
+
+// }

@@ -7,19 +7,16 @@
 
 <body>
     <% include ../partials/nav.ejs %>
-
         <div class="container">
-            <h2>Database Results</h2>
-
-            <ul>
-                <% results.forEach(function(r) { %>
-                    <li>
-                        <%= r.id %> -
-                            <%= r.name %>
-                    </li>
-                    <% }); %>
-            </ul>
-
+            <form>
+                <select class="custom-select">
+                <option selected>Select Mail Type</option>
+                <option value="1">Letters (Stamped)</option>
+                <option value="2">Letters (Metered)</option>
+                <option value="3">Large Envelopes (Flats)</option>
+                <option value="4">First-Class Package Service-Retail</option>
+            </select>
+            </form>
         </div>
 
 </body>
