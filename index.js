@@ -41,6 +41,6 @@ showTimes = () => {
     return result;
 }
 
-// getRate = () => {
+calculateRate = () => {
 
-// }
+}
