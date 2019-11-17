@@ -14,7 +14,7 @@ express()
     .set('view engine', 'ejs')
     .get('/', (req, res) => res.render('pages/index'))
     .get('/postal', (req, res) => res.render('pages/postal'))
-    .get('/getRate', (req, res) => res.render('pages/rates'))
+    .get('/rates', (req, res) => res.render('pages/rates'))
     .get('/cool', (req, res) => res.send(cool()))
     .get('/times', (req, res) => res.send(showTimes()))
     .get('/db', async(req, res) => {
